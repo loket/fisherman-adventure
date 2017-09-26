@@ -90,17 +90,15 @@ class GamePage extends Component {
   }
 
   createTiles = obj => obj.map((rows, index) => rows.map((column, idx) => this.renderTile(obj, index, idx)));
-
+  
   render() {
     const { food, gold, experience } = this.state.gameInfo;
     return (
       <div>
-        <Infobar gold={gold} food={food} experience={experience} />
         <div id='game'>
           {this.createTiles(this.state.map)}
           {this.createTiles(this.state.items)}
         </div>
-        <Message text={this.state.gameInfo.message}/>
       </div>
     );
   }
