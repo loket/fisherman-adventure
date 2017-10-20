@@ -11,8 +11,8 @@ import {
   PLAYER, STORM, SEAMONSTER,
   food, gold, experience, SIZE,
 } from '../../Utils/Gamevariables';
-import Message from '../molecules/Message';
-import Infobar from '../molecules/Infobar';
+//import Message from '../molecules/Message';
+//import Infobar from '../molecules/Infobar';
 
 let message = "Go find fortune and fame with the arrow keys";
 
@@ -90,7 +90,7 @@ class GamePage extends Component {
   }
 
   createTiles = obj => obj.map((rows, index) => rows.map((column, idx) => this.renderTile(obj, index, idx)));
-  
+
   render() {
     const { food, gold, experience } = this.state.gameInfo;
     return (
