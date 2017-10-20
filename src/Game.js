@@ -31,6 +31,7 @@ class Game extends React.Component {
         style={{
           top: index * (SIZE + SPACE) + 'px',
           left: idx * (SIZE + SPACE) + 'px',
+          backgroundColor: obj[index][idx] === 1 ? 'magenta' : 'cyan',
         }}
       />
     );
