@@ -1,6 +1,6 @@
-
 import React from 'react';
 
+import Tile from './components/atoms/tile'
 
 const pattern = [
   [1,0,1],
@@ -24,18 +24,13 @@ class Game extends React.Component {
     });
   }
 
-  renderTile = (obj, index, idx) => {
-    return (
-      <div
-        className="cell"
-        style={{
-          top: index * (SIZE + SPACE) + 'px',
-          left: idx * (SIZE + SPACE) + 'px',
-          backgroundColor: obj[index][idx] === 1 ? 'magenta' : 'cyan',
-        }}
-      />
-    );
-  }
+  renderTile = (obj, index, idx) => (
+    <Tile
+      top={index * (SIZE + SPACE)}
+      left={idx * (SIZE + SPACE)}
+      backgroundColor={obj[index][idx] === 1 ? 'magenta' : 'cyan'}
+    />
+  );
 
   renderChecker = (obj) => (
     obj.map((rows, index) =>
