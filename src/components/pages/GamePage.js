@@ -12,7 +12,7 @@ import {
   food, gold, experience, SIZE,
 } from '../../Utils/Gamevariables';
 //import Message from '../molecules/Message';
-//import Infobar from '../molecules/Infobar';
+import Infobar from '../molecules/Infobar';
 
 let message = "Go find fortune and fame with the arrow keys";
 
@@ -95,6 +95,7 @@ class GamePage extends Component {
     const { food, gold, experience } = this.state.gameInfo;
     return (
       <div>
+        <Infobar gold={gold} food={food} experience={experience} />
         <div id='game'>
           {this.createTiles(this.state.map)}
           {this.createTiles(this.state.items)}
